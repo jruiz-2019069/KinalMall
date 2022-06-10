@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmpleadoReporte" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff9fc953-d6be-4379-a896-ec6de5187d76">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="46"/>
+	<parameter name="id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select E.codigoEmpleado, E.nombreEmpleado, E.apellidoEmpleado, E.telefonoEmpleado, D.nombreDepartamento, C.nombreCargo, H.horarioEntrada, H.horarioSalida from Empleados E
+	inner join Departamentos D on E.codigoDepartamento = D.codigoDepartamento
+		inner join cargos C on C.codigoCargo = E.codigoCargo
+			inner join Horarios H on H.codigoHorario = E.codigoHorario
+				where E.codigoEmpleado = $P{id}; ]]>
+	</queryString>
+	<field name="codigoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidoEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreDepartamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="572" uuid="68433546-e6ab-4d53-88ce-4664c23d8f6d"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Ruiz\\Documents\\NetBeansProjects\\KinalMall2019069\\src\\org\\joseruiz\\images\\pngtree-copy-space-polygonal-blue-orange-background-image_524973.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="568" y="552" width="184" height="20" uuid="7618de91-f8cd-4665-baae-cee32f4e3e18"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jose Gerardo Ruiz García]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="181" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="22" y="7" width="150" height="144" uuid="dca6281b-a864-49e2-8173-b395636942b6"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Ruiz\\Documents\\NetBeansProjects\\KinalMall2019069\\src\\org\\joseruiz\\images\\zyro-image.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="205" y="62" width="382" height="105" forecolor="#FFFFFF" uuid="8be29078-9794-4f27-8230-6fd03a75fb29"/>
+				<textElement>
+					<font fontName="Stencil" size="36"/>
+				</textElement>
+				<text><![CDATA[Empleado]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="13" y="1" width="726" height="39" forecolor="#27567C" backcolor="#27567C" uuid="e921df17-9a57-4a2f-8a45-aee66d3b51d4"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="23" y="9" width="24" height="20" forecolor="#FFFFFF" uuid="efa9844f-bb69-4e88-8e26-4888a0cf87ba"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="9" width="57" height="20" forecolor="#FFFFFF" uuid="8b5642c5-f038-4ba0-b398-89f9784a4d7f"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="9" width="66" height="20" forecolor="#FFFFFF" uuid="3feb8009-a176-425e-86cb-ed04086f9ca8"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="9" width="63" height="20" forecolor="#FFFFFF" uuid="af68c3ea-4fc8-4c97-9d96-449bba07238b"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="97c3c58a-c19d-44ff-91a3-22dc88789794"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Departamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="9" width="48" height="20" forecolor="#FFFFFF" uuid="d91aa81b-fcf8-4090-9f13-56c371491a99"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cargo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="9" width="69" height="20" forecolor="#FFFFFF" uuid="f369054f-290d-47a2-9f1a-15b3f24cee8a"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="688" y="9" width="51" height="20" forecolor="#FFFFFF" uuid="026edc3c-b67f-4bfb-a884-e8d8ae679a36"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salida]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="13" y="1" width="726" height="32" forecolor="#CCFFFF" backcolor="#D6EAF8" uuid="987a084c-34ed-4d91-b012-f7a2810bd068"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="30" y="9" width="30" height="20" uuid="ed652694-2820-4312-8499-748bd8474e47"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="9" width="79" height="20" uuid="35eea1ba-b45c-40c6-8a35-ed57e2089dd4"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="9" width="100" height="20" uuid="b7fa81f2-63d6-493c-b37b-705d948d7b97"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="9" width="100" height="20" uuid="6b2a31a9-aa7d-4d46-82c8-4534a742b0fb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="9" width="100" height="20" uuid="f7e0ce6e-b414-4dd0-932c-0f8eb3c5159c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreDepartamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="9" width="100" height="20" uuid="880009d5-f85f-4792-b98b-774fd7347798"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreCargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="601" y="9" width="100" height="20" uuid="0e2344af-389a-41fc-b831-d5b8ae3bd710"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horarioEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="698" y="9" width="87" height="20" uuid="a1f82039-6b99-46e9-8747-d4eaef428598"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horarioSalida}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

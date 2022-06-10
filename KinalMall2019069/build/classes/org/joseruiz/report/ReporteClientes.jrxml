@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteClientes" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ebb21c0b-ecf2-481e-91f0-e82c4e28714e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codC" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select C.codigoCliente, C.nombresCliente, C.apellidosCliente, C.telefonoCliente, T.descripcion, CC.numeroFactura, CC.valorNetoPago, CC.estadoPago, L.codigoLocal from TipoCliente T
+	left join Clientes C   On T.codigoTipoCliente = C.codigoTipoCliente
+		left join Locales L on L.codigoLocal = C.codigoLocal
+			left join CuentasPorCobrar CC on C.codigoCliente = CC.codigoCliente
+				where C.codigoCliente = $P{codC};]]>
+	</queryString>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroFactura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorNetoPago" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoPago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="802" height="555" uuid="6bcef8d0-d8c8-4768-b381-ec9bc52310d1"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Ruiz\\Documents\\NetBeansProjects\\KinalMall2019069\\src\\org\\joseruiz\\images\\pngtree-copy-space-polygonal-blue-orange-background-image_524973.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="618" y="535" width="184" height="20" uuid="af71525f-bc0e-440d-bbdf-759a0f7335a3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jose Gerardo Ruiz García]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="181" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="22" y="7" width="150" height="144" uuid="b5d70c51-2d68-453b-ba3d-7964e36b8afa"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Ruiz\\Documents\\NetBeansProjects\\KinalMall2019069\\src\\org\\joseruiz\\images\\zyro-image.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="205" y="62" width="324" height="89" forecolor="#FFFFFF" uuid="fcfcae14-278a-4de9-a967-d54eddd752cc"/>
+				<textElement>
+					<font fontName="Stencil" size="36" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[CLIENTES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="22" y="0" width="759" height="39" forecolor="#27567C" backcolor="#27567C" uuid="dc327260-c81f-49dd-8b5e-795f56ac72db"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="29" y="10" width="50" height="20" forecolor="#FFFFFF" uuid="e03d2a1e-08e4-44f2-93f5-661284e9e8c8"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="10" width="61" height="20" forecolor="#FFFFFF" uuid="2a13eafa-6e77-4516-9575-89d71afc2995"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="10" width="62" height="20" forecolor="#FFFFFF" uuid="2e00d5ce-17af-431f-b038-f465cb20a8b2"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="10" width="60" height="20" forecolor="#FFFFFF" uuid="95e68e6f-1126-4e5d-a2cb-af990292f0fe"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="10" width="79" height="20" forecolor="#FFFFFF" uuid="6b3b59d9-ee4a-4691-ac58-db62690e051f"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="10" width="57" height="20" forecolor="#FFFFFF" uuid="6600285c-477e-4cc1-8cc3-b0f511b3af35"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="10" width="72" height="20" forecolor="#FFFFFF" uuid="39e0ec01-3c8b-4fcf-8b11-1abc47b247f1"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="10" width="84" height="20" forecolor="#FFFFFF" uuid="c3662416-62c5-4d09-a40f-4401085e3c69"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="698" y="10" width="73" height="20" forecolor="#FFFFFF" uuid="2589f036-9a08-4b05-8bdb-43537371c8a6"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Local]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="23" y="-2" width="759" height="32" forecolor="#CCFFFF" backcolor="#D6EAF8" uuid="3c758464-dd0e-4ed6-8d77-952dfee937c5"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="42" y="9" width="38" height="20" uuid="f41bdb18-e247-42ab-96fc-287997696ffb"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="9" width="100" height="20" uuid="2d08263a-882a-4939-802f-2a282a9ca172"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombresCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="9" width="100" height="20" uuid="a08050e1-0ef7-4161-8904-652e31b27f62"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidosCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="9" width="100" height="20" uuid="548dfe75-0dba-482c-b15b-6841289596db"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="9" width="100" height="20" uuid="26819ba1-4880-42f2-855d-1f6d58c56845"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="9" width="100" height="20" uuid="ed622f31-830c-4d1f-85b9-461add06320e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroFactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="529" y="9" width="100" height="20" uuid="8a4dbb98-f0bf-490a-89f6-977658b79fc7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valorNetoPago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="614" y="9" width="84" height="20" uuid="9ce5f583-a870-4fce-9f04-948576a0dc6e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estadoPago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="723" y="9" width="68" height="20" uuid="5d3b84d0-0f43-4684-8df2-086b8884114e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoLocal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

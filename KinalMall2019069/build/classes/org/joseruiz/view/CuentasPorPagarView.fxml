@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseruiz.controller.CuentaPorPagarController">
+   <children>
+      <Pane layoutY="-3.0" prefHeight="557.0" prefWidth="240.0" style="-fx-background-color: #ffa64d;">
+         <children>
+            <Circle fill="#015aa2" layoutX="126.0" layoutY="137.0" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="106.0" fitWidth="101.0" layoutX="74.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/metodo-de-pago.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="88.0" layoutY="501.0" onMouseClicked="#ventanaProveedor" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Atras.png" />
+               </image>
+            </ImageView>
+            <Pane layoutY="19.0" prefHeight="30.0" prefWidth="240.0" style="-fx-background-color: #27567c;">
+               <children>
+                  <Label layoutX="24.0" layoutY="-1.0" text="Cuentas Por Pagar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <VBox layoutX="2.0" layoutY="208.0" prefHeight="289.0" prefWidth="238.0">
+         <children>
+            <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="90.0" prefWidth="237.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="     Nuevo" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/Nuevo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="90.0" prefWidth="240.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="    Eliminar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="46.0" fitWidth="46.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/Eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="90.0" prefWidth="239.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="    Editar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/Editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="90.0" prefWidth="242.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="    Reporte" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Reporte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="550.0" fitWidth="666.0" layoutX="240.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/BackgroundVistas.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="368.0" layoutY="14.0" text="Código Cuenta por Pagar" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="62.0" text="Número Factura" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="110.0" text="Fecha Limite Pago" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumeroFactura" editable="false" layoutX="410.0" layoutY="63.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="txtCodigo" editable="false" layoutX="589.0" layoutY="15.0" prefHeight="25.0" prefWidth="101.0" />
+      <Label layoutX="250.0" layoutY="156.0" text="Estado Pago" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEstadoPago" editable="false" layoutX="410.0" layoutY="157.0" prefHeight="25.0" prefWidth="129.0" />
+      <Label layoutX="569.0" layoutY="62.0" text="Valor Neto Pago" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorNetoPago" editable="false" layoutX="770.0" layoutY="63.0" prefHeight="25.0" prefWidth="129.0" />
+      <Label layoutX="569.0" layoutY="110.0" text="Código Administración" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="569.0" layoutY="156.0" text="Código Proveedor" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodAdministracion" disable="true" layoutX="770.0" layoutY="111.0" prefHeight="25.0" prefWidth="129.0" />
+      <ComboBox fx:id="cmbCodProveedor" disable="true" layoutX="770.0" layoutY="157.0" prefHeight="25.0" prefWidth="129.0" />
+      <TableView fx:id="tblCuentasPorPagar" layoutX="248.0" layoutY="203.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="339.0" prefWidth="647.0" stylesheets="@../resource/tableCss.css">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="57.0" text="Código" />
+          <TableColumn fx:id="colNumeroFactura" prefWidth="84.0" text="No. Factura" />
+            <TableColumn fx:id="colFechaLimitePago" prefWidth="117.0" text="Fecha Limite Pago" />
+            <TableColumn fx:id="colEstadoPago" prefWidth="104.0" text="Estado Pago" />
+            <TableColumn fx:id="colValorNetoPago" prefWidth="107.0" text="Valor Neto Pago" />
+            <TableColumn prefWidth="177.0" text="Código">
+               <columns>
+                  <TableColumn fx:id="colCodigoAdministracion" prefWidth="96.0" text="Administración" />
+                  <TableColumn fx:id="colCodigoProveedor" prefWidth="81.0" text="Proveedor" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <GridPane fx:id="grpFechaLimite" layoutX="412.0" layoutY="108.0" prefHeight="30.0" prefWidth="129.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

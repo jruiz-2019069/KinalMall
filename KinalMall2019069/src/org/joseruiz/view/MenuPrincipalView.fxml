@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseruiz.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="940.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/Logo%20Prueba.jpeg" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="42.0" prefWidth="155.0" stylesheets="@../resource/MenuBarCss.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaDepartamento" text="Departamentos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargos" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorarios" text="Horarios" />
+              <MenuItem mnemonicParsing="false" onAction="#ventanaAdministracion" text="Administración" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoCliente" text="Tipo Cliente" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaLocales" text="Locales" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProveedor" text="Proveedores" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+      <ImageView fitHeight="50.0" fitWidth="57.0" layoutX="891.0" layoutY="-3.0" onMouseClicked="#ventanaLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Atras.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

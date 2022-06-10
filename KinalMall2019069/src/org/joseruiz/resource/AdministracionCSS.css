@@ -1,0 +1,46 @@
+/* 
+    Created on : 13/05/2021, 10:35:06 AM
+    Author     : Jose Ruiz
+*/
+
+.button1:hover{
+    -fx-background-color: #2271b3;
+    -fx-bacground-radius: 30 0 0 30;
+}
+
+.button1:pressed{
+    -fx-background-color: #AAC8CC;
+    -fx-bacground-radius: 30 0 0 30;
+    -fx-opacity: 0.5;
+}
+
+.button1{
+    -fx-background-color: #ffa64d;
+    -fx-bacground-radius: 30 0 0 30;
+}
+
+.tableView {
+    -fx-background-color: #AAC8CC;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#1F618D 0%, #1F618D 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+}
+
+
+
+
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseruiz.controller.TipoClienteController">
+   <children>
+      <Pane prefHeight="550.0" prefWidth="236.0" style="-fx-background-color: #ffa64d;">
+         <children>
+            <VBox layoutX="1.0" layoutY="229.0" prefHeight="271.0" prefWidth="238.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="70.0" prefWidth="237.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="    Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="72.0" prefWidth="237.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="    Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="46.0" fitWidth="46.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="75.0" prefWidth="237.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="    Editar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="64.0" prefWidth="237.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="    Reporte" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Circle fill="#015aa2" layoutX="118.0" layoutY="150.0" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="111.0" fitWidth="129.0" layoutX="64.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/comunidad.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="88.0" layoutY="501.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/homeflat_106039.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="550.0" fitWidth="669.0" layoutX="236.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/BackgroundVistas.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-1.0" layoutY="36.0" prefHeight="30.0" prefWidth="238.0" style="-fx-background-color: #27567c;">
+         <children>
+            <Label layoutX="57.0" layoutY="-1.0" text="Tipo Cliente" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tblTipoCliente" layoutX="244.0" layoutY="165.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="377.0" prefWidth="652.0" stylesheets="@../resource/tableCss.css">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoCliente" prefWidth="298.0" text="Código Tipo Cliente" />
+          <TableColumn fx:id="colDescripcion" prefWidth="397.0" text="Descripción" />
+        </columns>
+      </TableView>
+      <Label layoutX="247.0" layoutY="42.0" text="Código Tipo Cliente" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="106.0" text="Descripción" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoTipoCliente" editable="false" layoutX="429.0" layoutY="43.0" />
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="361.0" layoutY="107.0" prefHeight="25.0" prefWidth="217.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#27567c" height="138.0" layoutX="750.0" layoutY="-64.0" opacity="0.95" stroke="#27567c" strokeType="INSIDE" width="166.0" />
+      <ImageView fitHeight="65.0" fitWidth="63.0" layoutX="836.0" layoutY="3.0" onMouseClicked="#ventanaClientes" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Iconos-clientes.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="761.0" layoutY="22.0" onMouseClicked="#ventanaClientes" text="Clientes" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

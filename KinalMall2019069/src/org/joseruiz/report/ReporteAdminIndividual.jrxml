@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdminIndividual" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6c289637-bc04-49f6-84a3-9ddd44266be4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codAdministracion" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Call sp_BuscarAdministracion($P{codAdministracion});]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="4d72a042-cc73-495a-918b-513965b25eb0"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Ruiz\\Documents\\NetBeansProjects\\KinalMall2019069\\src\\org\\joseruiz\\images\\pngtree-copy-space-polygonal-blue-orange-background-image_524973.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="389" y="728" width="184" height="24" uuid="c33bed9b-9d3d-45f2-8f05-d7c22fb1fc0e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jose Gerardo Ruiz García]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="159" splitType="Stretch">
+			<image>
+				<reportElement x="22" y="7" width="153" height="144" uuid="36447269-c517-4cd7-996f-47449965dab7"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Ruiz\\Documents\\NetBeansProjects\\KinalMall2019069\\src\\org\\joseruiz\\images\\zyro-image.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="183" y="72" width="204" height="37" forecolor="#FFFFFF" uuid="1469b784-18c1-432a-928a-246be8fadc3a"/>
+				<textElement>
+					<font fontName="Arial Black" size="18" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRACIÓN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="20" y="1" width="536" height="39" forecolor="#27567C" backcolor="#27567C" uuid="8383523a-2b1f-4a56-b463-b29e7d5927c6"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="8" width="181" height="20" forecolor="#FFFFFF" uuid="b843a8e0-16dd-4d91-9c2f-0a823db1cbc1"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO ADMINISTRACIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="8" width="100" height="20" forecolor="#FFFFFF" uuid="d876b9df-f645-4706-8457-f9ac881d427f"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="59d08848-deb9-4e04-bf4f-4959c83824ea"/>
+				<textElement>
+					<font fontName="Cambria" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELÉFONO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="20" y="0" width="536" height="32" forecolor="#CCFFFF" backcolor="#D6EAF8" uuid="310fad47-1eb8-4d4f-92a2-e8adc69ac40e"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="85" y="8" width="100" height="20" uuid="04b909a7-0252-4d69-a665-61bd10c0b175"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="8" width="100" height="20" uuid="b160c54a-8c13-40f0-8d0d-10ff7cc2ada2"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="454" y="8" width="100" height="20" uuid="209f4e33-b030-4ea2-b628-c8b106d99d47"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

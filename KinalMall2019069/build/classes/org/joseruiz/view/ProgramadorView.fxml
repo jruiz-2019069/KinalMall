@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseruiz.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="557.0" fitWidth="921.0" layoutX="-4.0" layoutY="-6.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/BackgroundVistas.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="52.0" layoutX="434.0" layoutY="489.0" onMouseClicked="#menuPrincipal" pickOnBounds="true">
+         <image>
+            <Image url="@../images/Atras.png" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="108.0" prefWidth="915.0" style="-fx-background-color: #ffa64d;">
+         <children>
+            <Label layoutX="81.0" layoutY="29.0" text="José Gerardo Ruiz García/ 2019069/ IN5AM">
+               <font>
+                  <Font name="Times New Roman" size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#144675" height="341.0" layoutX="343.0" layoutY="139.0" opacity="0.84" stroke="#0f0f0f" strokeType="INSIDE" width="236.0" />
+      <ImageView fitHeight="293.0" fitWidth="181.0" layoutX="370.0" layoutY="163.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/Jose%20Ruiz%20Prueba.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseruiz.controller.LoginController">
+   <children>
+      <ImageView fitHeight="640.0" fitWidth="361.0" layoutX="129.0" layoutY="-141.0" pickOnBounds="true" rotate="-90.0">
+         <image>
+            <Image url="@../images/Wallpapers%20Honor%20View%2010%20-%20Pack%201.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="39.0" layoutY="106.0" prefHeight="39.0" prefWidth="145.0" text="User Name" textFill="#f2f2f2">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="210.0" prefHeight="39.0" prefWidth="145.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsuario" layoutX="39.0" layoutY="164.0" prefHeight="25.0" prefWidth="175.0" />
+      <TextField fx:id="txtPassword" layoutX="39.0" layoutY="259.0" prefHeight="25.0" prefWidth="175.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="443.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/unnamed.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="79.0" layoutY="27.0" text="Login" textFill="#ffe9e9">
+         <font>
+            <Font name="Bernard MT Condensed" size="36.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="478.0" layoutY="271.0" onAction="#ventanaUsuario" text="Sign in" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="btnLogin" layoutX="79.0" layoutY="306.0" onAction="#Login" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="35.0" fitWidth="21.0" layoutX="11.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/architetto-remix-orange-grey-man-icon-129629.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="32.0" layoutX="7.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/768px-Password.svg.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

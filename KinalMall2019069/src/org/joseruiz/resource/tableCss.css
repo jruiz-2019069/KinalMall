@@ -1,0 +1,90 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23/06/2021, 11:49:12 AM
+    Author     : Jose Ruiz
+*/
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color,   #FDFEFE;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER; 
+    -fx-text-fill: black;
+
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #EAEDED   ;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-alignment: CENTER;
+}
+
+.table-cell {
+    -fx-padding: 4px ;
+    -fx-border-color: #1F618D;
+    -fx-font: 12px "Segoe UI";
+    -fx-border-insets: 1;
+    -fx-text-fill: black;
+
+}
+
+.table-cell:hover {
+    -fx-background-color: #90be6d;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:empty, .table-cell:empty:hover {/*FONDO*/
+    -fx-background-color: #D6EAF8;
+}
+
+.table-view{
+    -fx-background-color: #85C1E9;
+} 
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0.5px;
+}
+
+.table-view:row-selection .table-row-cell:filled:selected { 
+    -fx-background-color: #fcbf49;
+}
+
+.table-view, .table-view:focused {
+    -fx-background-color: white;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 1.4, 0, 0;
+
+}
+
+.table-view .column-header .label{/*ENCABEZADO*/
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header:hover {/*ENCABEZADO*/
+    -fx-background-color: #2271b3;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color:  #27567c;
+    -fx-size: 30;
+    -fx-alignment: CENTER;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 1 3 0;
+    -fx-border-insets: 0;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background {/*ENCABEZADO*/
+    -fx-background-color: #003049;
+}
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: #85C1E9;
+    -fx-border-color: #1A5276;
+}

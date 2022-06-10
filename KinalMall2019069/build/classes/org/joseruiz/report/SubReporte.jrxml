@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReporte" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f09bc9ea-e188-4ddd-bf91-0e5ac3c85ba3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codC" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * from Clientes
+	where codigoCliente = $P{codC};]]>
+	</queryString>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="13" width="100" height="20" uuid="12900aeb-1b4a-4520-b6e7-31df49e0dd07"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="13" width="100" height="20" uuid="3652d94d-b671-43bd-a7e5-2379c6edcacf"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="13" width="100" height="20" uuid="655e5228-654f-474e-87ef-1b773b7c899e"/>
+				<textElement>
+					<font fontName="Cambria" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Correo Electrónico]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="36" width="100" height="20" uuid="5353f20e-7006-4b34-8c4c-f5dddaaa4374"/>
+				<textFieldExpression><![CDATA[$F{nombresCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="36" width="100" height="20" uuid="bcf827c9-5d0a-4145-8f3b-9e18f532561a"/>
+				<textFieldExpression><![CDATA[$F{apellidosCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="36" width="100" height="20" uuid="984fed63-9e1a-485e-8a1d-e8dd280e604a"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

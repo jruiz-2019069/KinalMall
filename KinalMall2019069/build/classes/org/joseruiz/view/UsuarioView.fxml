@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseruiz.controller.UsuarioController">
+   <children>
+      <Pane layoutY="-4.0" prefHeight="386.0" prefWidth="242.0" style="-fx-background-color: #ffa64d;">
+         <children>
+            <Pane layoutY="18.0" prefHeight="30.0" prefWidth="240.0" style="-fx-background-color: #27567c;">
+               <children>
+                  <Label layoutX="78.0" layoutY="-1.0" text="Usuario" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="1.0" layoutY="200.0" prefHeight="178.0" prefWidth="238.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Nuevo" prefHeight="90.0" prefWidth="237.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="     Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnCancelar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Cancelar" prefHeight="90.0" prefWidth="240.0" styleClass="button1" stylesheets="@../resource/AdministracionCSS.css" text="    Cancelar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="46.0" fitWidth="46.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/cancelar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Circle fill="#015aa2" layoutX="117.0" layoutY="128.0" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="149.0" fitWidth="138.0" layoutX="48.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon-5404125_960_720.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="379.0" fitWidth="371.0" layoutX="240.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/BackgroundVistas.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="265.0" layoutY="87.0" text="Nombre Usuario" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="263.0" layoutY="135.0" text="Apellido Usuario" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="263.0" layoutY="190.0" text="Usuario Login" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="264.0" layoutY="246.0" text="Contraseña" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" editable="false" layoutX="440.0" layoutY="88.0" />
+      <TextField fx:id="txtApellido" editable="false" layoutX="440.0" layoutY="136.0" />
+      <TextField fx:id="txtUsuario" editable="false" layoutX="440.0" layoutY="191.0" />
+      <TextField fx:id="txtContrasena" editable="false" layoutX="440.0" layoutY="247.0" />
+      <ImageView fx:id="imgAtras" fitHeight="89.0" fitWidth="72.0" layoutX="387.0" layoutY="289.0" onMouseClicked="#ventanaLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Atras.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="319.0" layoutY="14.0" text="DATOS USUARIO" textFill="#0d0d0d">
+         <font>
+            <Font name="Bernard MT Condensed" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
